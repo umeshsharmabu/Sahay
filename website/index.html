@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sahay - AI-Powered Job & Service Finder</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-seedling"></i>
+                <span>Sahay</span>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#jobs" class="nav-link">Jobs</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <div class="nav-controls">
+                    <button class="btn-icon" id="languageToggle" title="Switch Language">
+                        <i class="fas fa-language"></i>
+                        <span id="currentLang">EN</span>
+                    </button>
+                    <button class="btn-icon" id="themeToggle" title="Toggle Theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button class="btn btn--primary" id="loginBtn">Login</button>
+                </div>
+            </div>
+            <button class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="page-section active">
+        <div class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title" data-en="Bridging Rural Dreams with AI-Powered Opportunities" data-hi="ग्रामीण सपनों को AI से जोड़ना">
+                        Bridging Rural Dreams with AI-Powered Opportunities
+                    </h1>
+                    <p class="hero-description" data-en="Connecting job seekers and service providers in semi-urban and rural areas through intelligent matching technology" data-hi="बुद्धिमान मैचिंग तकनीक के माध्यम से अर्ध-शहरी और ग्रामीण क्षेत्रों में नौकरी चाहने वालों और सेवा प्रदाताओं को जोड़ना">
+                        Connecting job seekers and service providers in semi-urban and rural areas through intelligent matching technology
+                    </p>
+                    <div class="hero-actions">
+                        <button class="btn btn--primary btn--lg" id="findJobsBtn">
+                            <i class="fas fa-search"></i>
+                            <span data-en="Find Jobs" data-hi="नौकरी खोजें">Find Jobs</span>
+                        </button>
+                        <button class="btn btn--secondary btn--lg" id="postJobBtn">
+                            <i class="fas fa-plus"></i>
+                            <span data-en="Post Job" data-hi="नौकरी पोस्ट करें">Post Job</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">15,600+</div>
+                        <div class="stat-label" data-en="Registered Users" data-hi="पंजीकृत उपयोगकर्ता">Registered Users</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">8,450+</div>
+                        <div class="stat-label" data-en="Successful Matches" data-hi="सफल मैच">Successful Matches</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">67.8%</div>
+                        <div class="stat-label" data-en="Mobile Reach" data-hi="मोबाइल पहुंच">Mobile Reach</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Problem & Solution Section -->
+        <div class="problem-solution">
+            <div class="container">
+                <div class="section-header">
+                    <h2 data-en="The Rural Employment Challenge" data-hi="ग्रामीण रोजगार चुनौती">The Rural Employment Challenge</h2>
+                </div>
+                <div class="challenge-grid">
+                    <div class="challenge-item">
+                        <div class="challenge-icon">
+                            <i class="fas fa-chart-line-down"></i>
+                        </div>
+                        <h3 data-en="High Unemployment" data-hi="उच्च बेरोजगारी">High Unemployment</h3>
+                        <p data-en="23.4% rural unemployment rate limits economic growth" data-hi="23.4% ग्रामीण बेरोजगारी दर आर्थिक विकास को सीमित करती है">23.4% rural unemployment rate limits economic growth</p>
+                    </div>
+                    <div class="challenge-item">
+                        <div class="challenge-icon">
+                            <i class="fas fa-wifi"></i>
+                        </div>
+                        <h3 data-en="Limited Digital Access" data-hi="सीमित डिजिटल पहुंच">Limited Digital Access</h3>
+                        <p data-en="Only 34.5% digital literacy hampers online job search" data-hi="केवल 34.5% डिजिटल साक्षरता ऑनलाइन नौकरी खोज में बाधा डालती है">Only 34.5% digital literacy hampers online job search</p>
+                    </div>
+                    <div class="challenge-item">
+                        <div class="challenge-icon">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </div>
+                        <h3 data-en="Geographic Isolation" data-hi="भौगोलिक अलगाव">Geographic Isolation</h3>
+                        <p data-en="Distance from urban centers reduces opportunities" data-hi="शहरी केंद्रों से दूरी अवसरों को कम करती है">Distance from urban centers reduces opportunities</p>
+                    </div>
+                </div>
+
+                <div class="solution-section">
+                    <h2 data-en="Our AI-Powered Solution" data-hi="हमारा AI-संचालित समाधान">Our AI-Powered Solution</h2>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <h3 data-en="Smart Job Matching" data-hi="स्मार्ट जॉब मैचिंग">Smart Job Matching</h3>
+                            <p data-en="AI algorithms match skills with local opportunities" data-hi="AI एल्गोरिदम स्किल्स को स्थानीय अवसरों से मिलाते हैं">AI algorithms match skills with local opportunities</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-language"></i>
+                            </div>
+                            <h3 data-en="Multi-language Support" data-hi="बहुभाषा समर्थन">Multi-language Support</h3>
+                            <p data-en="Hindi and English interface for better accessibility" data-hi="बेहतर पहुंच के लिए हिंदी और अंग्रेजी इंटरफेस">Hindi and English interface for better accessibility</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <h3 data-en="Mobile-First Design" data-hi="मोबाइल-फर्स्ट डिजाइन">Mobile-First Design</h3>
+                            <p data-en="Optimized for smartphones with low bandwidth" data-hi="कम बैंडविड्थ वाले स्मार्टफोन के लिए अनुकूलित">Optimized for smartphones with low bandwidth</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-microphone"></i>
+                            </div>
+                            <h3 data-en="Voice Search" data-hi="वॉयस सर्च">Voice Search</h3>
+                            <p data-en="Search jobs and services using voice commands" data-hi="वॉयस कमांड का उपयोग करके नौकरियों और सेवाओं की खोज करें">Search jobs and services using voice commands</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Jobs Section -->
+    <section id="jobs" class="page-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-en="Find Your Perfect Job" data-hi="अपनी परफेक्ट नौकरी खोजें">Find Your Perfect Job</h2>
+                <p data-en="AI-powered job matching based on your skills and location" data-hi="आपके कौशल और स्थान के आधार पर AI-संचालित नौकरी मैचिंग">AI-powered job matching based on your skills and location</p>
+            </div>
+
+            <!-- Voice Search -->
+            <div class="voice-search">
+                <button class="btn-voice" id="voiceSearchBtn">
+                    <i class="fas fa-microphone"></i>
+                    <span data-en="Voice Search" data-hi="वॉयस सर्च">Voice Search</span>
+                </button>
+                <div class="voice-status" id="voiceStatus"></div>
+            </div>
+
+            <!-- Search and Filters -->
+            <div class="search-filters">
+                <div class="search-bar">
+                    <input type="text" id="jobSearch" class="form-control" placeholder="Search jobs by title, skills, or company..." data-en-placeholder="Search jobs by title, skills, or company..." data-hi-placeholder="शीर्षक, कौशल या कंपनी द्वारा नौकरी खोजें...">
+                    <button class="btn btn--primary" id="searchBtn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <div class="filter-row">
+                    <select class="form-control" id="locationFilter">
+                        <option value="" data-en="All Locations" data-hi="सभी स्थान">All Locations</option>
+                        <option value="haryana">Haryana</option>
+                        <option value="up">Uttar Pradesh</option>
+                        <option value="mp">Madhya Pradesh</option>
+                        <option value="rajasthan">Rajasthan</option>
+                        <option value="maharashtra">Maharashtra</option>
+                    </select>
+                    <select class="form-control" id="experienceFilter">
+                        <option value="" data-en="Any Experience" data-hi="कोई भी अनुभव">Any Experience</option>
+                        <option value="0-1">0-1 years</option>
+                        <option value="1-3">1-3 years</option>
+                        <option value="3-5">3-5 years</option>
+                        <option value="5+">5+ years</option>
+                    </select>
+                    <select class="form-control" id="typeFilter">
+                        <option value="" data-en="All Types" data-hi="सभी प्रकार">All Types</option>
+                        <option value="full-time">Full-time</option>
+                        <option value="part-time">Part-time</option>
+                        <option value="contract">Contract</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- AI Insights -->
+            <div class="ai-insights">
+                <div class="insight-card">
+                    <i class="fas fa-brain"></i>
+                    <div class="insight-content">
+                        <h4 data-en="AI Recommendation" data-hi="AI सिफारिश">AI Recommendation</h4>
+                        <p data-en="Based on your profile, we found 5 high-matching jobs in your area" data-hi="आपकी प्रोफ़ाइल के आधार पर, हमें आपके क्षेत्र में 5 उच्च मैचिंग नौकरियाँ मिलीं">Based on your profile, we found 5 high-matching jobs in your area</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jobs List -->
+            <div class="jobs-list" id="jobsList">
+                <!-- Jobs will be populated by JavaScript -->
+            </div>
+
+            <!-- Load More -->
+            <div class="load-more">
+                <button class="btn btn--outline" id="loadMoreJobs">
+                    <span data-en="Load More Jobs" data-hi="और नौकरियाँ लोड करें">Load More Jobs</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="page-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-en="Local Services Directory" data-hi="स्थानीय सेवा निर्देशिका">Local Services Directory</h2>
+                <p data-en="Find trusted local service providers in your area" data-hi="अपने क्षेत्र में विश्वसनीय स्थानीय सेवा प्रदाताओं को खोजें">Find trusted local service providers in your area</p>
+            </div>
+
+            <!-- Service Categories -->
+            <div class="service-categories">
+                <button class="category-btn active" data-category="all">
+                    <i class="fas fa-th-large"></i>
+                    <span data-en="All Services" data-hi="सभी सेवाएं">All Services</span>
+                </button>
+                <button class="category-btn" data-category="health">
+                    <i class="fas fa-heartbeat"></i>
+                    <span data-en="Healthcare" data-hi="स्वास्थ्य सेवा">Healthcare</span>
+                </button>
+                <button class="category-btn" data-category="repair">
+                    <i class="fas fa-tools"></i>
+                    <span data-en="Repair Services" data-hi="मरम्मत सेवाएं">Repair Services</span>
+                </button>
+                <button class="category-btn" data-category="transport">
+                    <i class="fas fa-truck"></i>
+                    <span data-en="Transportation" data-hi="परिवहन">Transportation</span>
+                </button>
+                <button class="category-btn" data-category="agriculture">
+                    <i class="fas fa-tractor"></i>
+                    <span data-en="Agriculture" data-hi="कृषि">Agriculture</span>
+                </button>
+            </div>
+
+            <!-- Services List -->
+            <div class="services-grid" id="servicesList">
+                <!-- Services will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="page-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-en="How AI & ML Powers Our Platform" data-hi="AI और ML हमारे प्लेटफॉर्म को कैसे संचालित करते हैं">How AI & ML Powers Our Platform</h2>
+            </div>
+
+            <div class="ai-features">
+                <div class="ai-feature">
+                    <div class="ai-icon">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                    <h3 data-en="Skill Extraction" data-hi="कौशल निष्कर्षण">Skill Extraction</h3>
+                    <p data-en="NLP algorithms automatically extract skills from job descriptions and user profiles" data-hi="NLP एल्गोरिदम नौकरी विवरण और उपयोगकर्ता प्रोफ़ाइल से स्वचालित रूप से कौशल निकालते हैं">NLP algorithms automatically extract skills from job descriptions and user profiles</p>
+                </div>
+                <div class="ai-feature">
+                    <div class="ai-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 data-en="Smart Matching" data-hi="स्मार्ट मैचिंग">Smart Matching</h3>
+                    <p data-en="Machine learning models match candidates with jobs based on compatibility scores" data-hi="मशीन लर्निंग मॉडल संगतता स्कोर के आधार पर उम्मीदवारों को नौकरियों से मैच करते हैं">Machine learning models match candidates with jobs based on compatibility scores</p>
+                </div>
+                <div class="ai-feature">
+                    <div class="ai-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3 data-en="Salary Prediction" data-hi="वेतन पूर्वानुमान">Salary Prediction</h3>
+                    <p data-en="AI predicts fair salary ranges based on skills, experience, and location data" data-hi="AI कौशल, अनुभव और स्थान डेटा के आधार पर उचित वेतन सीमा की भविष्यवाणी करता है">AI predicts fair salary ranges based on skills, experience, and location data</p>
+                </div>
+                <div class="ai-feature">
+                    <div class="ai-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 data-en="Service Recommendations" data-hi="सेवा सिफारिशें">Service Recommendations</h3>
+                    <p data-en="Collaborative filtering suggests relevant services based on user behavior" data-hi="सहयोगात्मक फिल्टरिंग उपयोगकर्ता व्यवहार के आधार पर प्रासंगिक सेवाओं का सुझाव देता है">Collaborative filtering suggests relevant services based on user behavior</p>
+                </div>
+                <div class="ai-feature">
+                    <div class="ai-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3 data-en="Language Processing" data-hi="भाषा प्रसंस्करण">Language Processing</h3>
+                    <p data-en="Advanced NLP handles Hindi and English text processing for better understanding" data-hi="उन्नत NLP बेहतर समझ के लिए हिंदी और अंग्रेजी टेक्स्ट प्रोसेसिंग को संभालता है">Advanced NLP handles Hindi and English text processing for better understanding</p>
+                </div>
+                <div class="ai-feature">
+                    <div class="ai-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 data-en="Location Intelligence" data-hi="स्थान बुद्धिमत्ता">Location Intelligence</h3>
+                    <p data-en="Geographic AI optimizes job and service discovery within commutable distances" data-hi="भौगोलिक AI यात्रा योग्य दूरी के भीतर नौकरी और सेवा खोज को अनुकूलित करता है">Geographic AI optimizes job and service discovery within commutable distances</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="page-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-en="Get in Touch" data-hi="संपर्क करें">Get in Touch</h2>
+                <p data-en="Have questions? We're here to help!" data-hi="प्रश्न हैं? हम मदद के लिए यहाँ हैं!">Have questions? We're here to help!</p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4 data-en="Email" data-hi="ईमेल">Email</h4>
+                            <p>support@sahay.in</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4 data-en="Phone" data-hi="फोन">Phone</h4>
+                            <p>+91 1800-123-456</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4 data-en="Address" data-hi="पता">Address</h4>
+                            <p data-en="Rural Innovation Hub, New Delhi, India" data-hi="ग्रामीण नवाचार हब, नई दिल्ली, भारत">Rural Innovation Hub, New Delhi, India</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Your Name" data-en-placeholder="Your Name" data-hi-placeholder="आपका नाम" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Your Email" data-en-placeholder="Your Email" data-hi-placeholder="आपका ईमेल" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" rows="5" placeholder="Your Message" data-en-placeholder="Your Message" data-hi-placeholder="आपका संदेश" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--primary">
+                        <span data-en="Send Message" data-hi="संदेश भेजें">Send Message</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 data-en="Login to Sahay" data-hi="Sahay में लॉगिन करें">Login to Sahay</h3>
+                <button class="btn-close" id="closeLoginModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label class="form-label" data-en="Email Address" data-hi="ईमेल पता">Email Address</label>
+                        <input type="email" class="form-control" id="loginEmail" placeholder="Enter your email" data-en-placeholder="Enter your email" data-hi-placeholder="अपना ईमेल दर्ज करें" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" data-en="Password" data-hi="पासवर्ड">Password</label>
+                        <input type="password" class="form-control" id="loginPassword" placeholder="Enter your password" data-en-placeholder="Enter your password" data-hi-placeholder="अपना पासवर्ड दर्ज करें" required>
+                    </div>
+                    <div class="form-group">
+                        <div class="flex items-center gap-8">
+                            <input type="checkbox" id="rememberMe">
+                            <label for="rememberMe" data-en="Remember me" data-hi="मुझे याद रखें">Remember me</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full-width">
+                        <span data-en="Login" data-hi="लॉगिन">Login</span>
+                    </button>
+                    <div style="text-align: center; margin-top: 16px;">
+                        <p><span data-en="Don't have an account?" data-hi="खाता नहीं है?">Don't have an account?</span> 
+                        <a href="#" onclick="showRegisterModal()" data-en="Register here" data-hi="यहाँ पंजीकरण करें">Register here</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div id="registerModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 data-en="Join Sahay" data-hi="Sahay में शामिल हों">Join Sahay</h3>
+                <button class="btn-close" id="closeRegisterModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="registerForm">
+                    <div class="form-group">
+                        <label class="form-label" data-en="Full Name" data-hi="पूरा नाम">Full Name</label>
+                        <input type="text" class="form-control" id="registerName" placeholder="Enter your full name" data-en-placeholder="Enter your full name" data-hi-placeholder="अपना पूरा नाम दर्ज करें" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" data-en="Email Address" data-hi="ईमेल पता">Email Address</label>
+                        <input type="email" class="form-control" id="registerEmail" placeholder="Enter your email" data-en-placeholder="Enter your email" data-hi-placeholder="अपना ईमेल दर्ज करें" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" data-en="Mobile Number" data-hi="मोबाइल नंबर">Mobile Number</label>
+                        <input type="tel" class="form-control" id="registerPhone" placeholder="+91 98765 43210" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" data-en="Location" data-hi="स्थान">Location</label>
+                        <input type="text" class="form-control" id="registerLocation" placeholder="City, State" data-en-placeholder="City, State" data-hi-placeholder="शहर, राज्य" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" data-en="I am a..." data-hi="मैं हूँ...">I am a...</label>
+                        <select class="form-control" id="userType" required>
+                            <option value="" data-en="Select user type" data-hi="उपयोगकर्ता प्रकार चुनें">Select user type</option>
+                            <option value="job-seeker" data-en="Job Seeker" data-hi="नौकरी चाहने वाला">Job Seeker</option>
+                            <option value="employer" data-en="Employer/Business" data-hi="नियोक्ता/व्यवसाय">Employer/Business</option>
+                            <option value="service-provider" data-en="Service Provider" data-hi="सेवा प्रदाता">Service Provider</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" data-en="Password" data-hi="पासवर्ड">Password</label>
+                        <input type="password" class="form-control" id="registerPassword" placeholder="Create a password" data-en-placeholder="Create a password" data-hi-placeholder="पासवर्ड बनाएं" required minlength="8">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" data-en="Confirm Password" data-hi="पासवर्ड की पुष्टि करें">Confirm Password</label>
+                        <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm your password" data-en-placeholder="Confirm your password" data-hi-placeholder="अपने पासवर्ड की पुष्टि करें" required>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full-width">
+                        <span data-en="Create Account" data-hi="खाता बनाएं">Create Account</span>
+                    </button>
+                    <div style="text-align: center; margin-top: 16px;">
+                        <p><span data-en="Already have an account?" data-hi="पहले से खाता है?">Already have an account?</span> 
+                        <a href="#" onclick="showLoginModal()" data-en="Login here" data-hi="यहाँ लॉगिन करें">Login here</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Post Job Modal -->
+    <div id="postJobModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 data-en="Post a Job" data-hi="नौकरी पोस्ट करें">Post a Job</h3>
+                <button class="btn-close" id="closePostJobModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="postJobForm">
+                    <div class="form-group">
+                        <label class="form-label" data-en="Job Title" data-hi="नौकरी का शीर्षक">Job Title</label>
+                        <input type="text" class="form-control" id="jobTitle" placeholder="e.g. Agricultural Equipment Operator" data-en-placeholder="e.g. Agricultural Equipment Operator" data-hi-placeholder="जैसे कृषि उपकरण संचालक" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" data-en="Company Name" data-hi="कंपनी का नाम">Company Name</label>
+                        <input type="text" class="form-control" id="companyName" placeholder="Your company name" data-en-placeholder="Your company name" data-hi-placeholder="आपकी कंपनी का नाम" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" data-en="Job Location" data-hi="नौकरी का स्थान">Job Location</label>
+                        <input type="text" class="form-control" id="jobLocation" placeholder="City, State" data-en-placeholder="City, State" data-hi-placeholder="शहर, राज्य" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" data-en="Job Type" data-hi="नौकरी का प्रकार">Job Type</label>
+                        <select class="form-control" id="jobType" required>
+                            <option value="" data-en="Select job type" data-hi="नौकरी का प्रकार चुनें">Select job type</option>
+                            <option value="full-time">Full-time</option>
+                            <option value="part-time">Part-time</option>
+                            <option value="contract">Contract</option>
+                            <option value="freelance">Freelance</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" data-en="Experience Required" data-hi="आवश्यक अनुभव">Experience Required</label>
+                        <select class="form-control" id="jobExperience" required>
+                            <option value="" data-en="Select experience level" data-hi="अनुभव स्तर चुनें">Select experience level</option>
+                            <option value="0-1 years">0-1 years</option>
+                            <option value="1-2 years">1-2 years</option>
+                            <option value="2-5 years">2-5 years</option>
+                            <option value="5+ years">5+ years</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" data-en="Salary Range" data-hi="वेतन सीमा">Salary Range</label>
+                        <input type="text" class="form-control" id="jobSalary" placeholder="e.g. ₹18,000 - ₹25,000" data-en-placeholder="e.g. ₹18,000 - ₹25,000" data-hi-placeholder="जैसे ₹18,000 - ₹25,000" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" data-en="Required Skills (comma separated)" data-hi="आवश्यक कौशल (अल्पविराम से अलग करें)">Required Skills (comma separated)</label>
+                        <input type="text" class="form-control" id="jobSkills" placeholder="e.g. Tractor Operation, Farm Equipment" data-en-placeholder="e.g. Tractor Operation, Farm Equipment" data-hi-placeholder="जैसे ट्रैक्टर संचालन, कृषि उपकरण" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" data-en="Job Description" data-hi="नौकरी का विवरण">Job Description</label>
+                        <textarea class="form-control" id="jobDescription" rows="4" placeholder="Describe the job responsibilities and requirements..." data-en-placeholder="Describe the job responsibilities and requirements..." data-hi-placeholder="नौकरी की जिम्मेदारियों और आवश्यकताओं का वर्णन करें..." required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" data-en="Contact Email" data-hi="संपर्क ईमेल">Contact Email</label>
+                        <input type="email" class="form-control" id="contactEmail" placeholder="Email for applications" data-en-placeholder="Email for applications" data-hi-placeholder="आवेदन के लिए ईमेल" required>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full-width">
+                        <span data-en="Post Job" data-hi="नौकरी पोस्ट करें">Post Job</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Job Detail Modal -->
+    <div id="jobModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="jobModalTitle">Job Title</h3>
+                <button class="btn-close" id="closeJobModal">&times;</button>
+            </div>
+            <div class="modal-body" id="jobModalBody">
+                <!-- Job details will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Success/Error Messages -->
+    <div id="messageToast" class="toast-message hidden">
+        <div class="toast-content">
+            <i id="toastIcon"></i>
+            <span id="toastMessage"></span>
+            <button class="toast-close" onclick="hideToast()">&times;</button>
+        </div>
+    </div>
+
+    <!-- Offline Indicator -->
+    <div class="offline-indicator" id="offlineIndicator">
+        <i class="fas fa-wifi-slash"></i>
+        <span data-en="You're offline. Some features may be limited." data-hi="आप ऑफलाइन हैं। कुछ सुविधाएं सीमित हो सकती हैं।">You're offline. Some features may be limited.</span>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Sahay</h4>
+                    <p data-en="Empowering rural communities through AI-powered job matching" data-hi="AI-संचालित नौकरी मैचिंग के माध्यम से ग्रामीण समुदायों को सशक्त बनाना">Empowering rural communities through AI-powered job matching</p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-en="Quick Links" data-hi="त्वरित लिंक">Quick Links</h4>
+                    <a href="#home" data-en="Home" data-hi="मुख्य">Home</a>
+                    <a href="#jobs" data-en="Jobs" data-hi="नौकरियाँ">Jobs</a>
+                    <a href="#services" data-en="Services" data-hi="सेवाएं">Services</a>
+                    <a href="#about" data-en="About" data-hi="के बारे में">About</a>
+                </div>
+                <div class="footer-section">
+                    <h4 data-en="Support" data-hi="समर्थन">Support</h4>
+                    <a href="#contact" data-en="Contact Us" data-hi="हमसे संपर्क करें">Contact Us</a>
+                    <a href="#" data-en="Help Center" data-hi="सहायता केंद्र">Help Center</a>
+                    <a href="#" data-en="Privacy Policy" data-hi="गोपनीयता नीति">Privacy Policy</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Sahay. <span data-en="All rights reserved." data-hi="सभी अधिकार सुरक्षित।">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
